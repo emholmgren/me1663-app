@@ -45,7 +45,7 @@ function App() {
                     });
 
                     const backgroundImage = determineBackground(weatherData.weatherCode);
-                    document.body.style.backgroundImage = `url('../public/backgrounds/${backgroundImage.background}')`;
+                    document.body.style.backgroundImage = `url(${process.env.PUBLIC_URL}/backgrounds/${backgroundImage.background})`;
 
                     const avatarImage = determineMood(weatherData.weatherCode, weatherData.temperature);
                     setAvatar(avatarImage.mood);
@@ -98,11 +98,11 @@ function App() {
             </div>
 
             <div className="avatar-container">
-                <img src={`../public/avatars/${avatar}.png`} alt="avatar" class="avatar" />
+                <img src={`${process.env.PUBLIC_URL}/avatars/${avatar}.png`} alt="avatar" class="avatar" />
                 {selectedClothing.map((item) => (
                     <img
                         key={item.id}
-                        src={`../public/clothing/${item.image}`}
+                        src={`${process.env.PUBLIC_URL}/clothing/${item.image}`}
                         alt={item.name}
                         className="clothing-layer"
                     />
@@ -118,7 +118,7 @@ function App() {
                             }`}
                             onClick={() => toggleClothingItem(item)}
                         >
-                            <img src={`../public/clothing/${item.image}`} alt={item.name} />
+                            <img src={`${process.env.PUBLIC_URL}/clothing/${item.image}`} alt={item.name} />
                             <span>{item.name}</span>
                         </button>
                     ))}
