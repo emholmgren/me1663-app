@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: rgb(46, 46, 46);
+  background-image: url('../public/backgrounds/default-bg.jpg');
+  background-repeat: repeat;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.avatar-container {
+  margin: 150px auto;
+  background: white; /* Temporary until correct images are in place */
+  width: 400px;
+  height: 400px;
+}
+
+.avatar-container img {
+  width: 400px;
+  height: 400px;
+}
+
+/*.avatar {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}*/
+
+.clothing-layer {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-inline: auto; 
+  width: fit-content;
+  z-index: 2;
+}
+
+.clothing-menu {
+  align-self: bottom;
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  /*justify-content: center;*/
+}
+
+.clothing-menu button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #050303;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.clothing-menu img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.clothing-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.clothing-menu button.selected {
+  border: 2px solid green;
+}
